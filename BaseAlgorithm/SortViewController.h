@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  SortViewController.h
 //  BaseAlgorithm
 //
 //  Created by joker on 2019/1/8.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface SortViewController : UIViewController
 
 
 @end
