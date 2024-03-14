@@ -17,6 +17,8 @@
 		FA3632B621E82DA400ADCDD8 /* GCDSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3632B521E82DA400ADCDD8 /* GCDSimple.m */; };
 		FA3632BA21E8828600ADCDD8 /* NSOperationSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3632B921E8828600ADCDD8 /* NSOperationSimple.m */; };
 		FA3632BD21E88A3600ADCDD8 /* JMOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3632BC21E88A3600ADCDD8 /* JMOperation.m */; };
+		FA828CDA2BA2EE3F00EAD006 /* RuntimrSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = FA828CD92BA2EE3F00EAD006 /* RuntimrSimple.m */; };
+		FA828CDD2BA2EE5C00EAD006 /* testManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA828CDC2BA2EE5C00EAD006 /* testManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,10 @@
 		FA3632B921E8828600ADCDD8 /* NSOperationSimple.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSOperationSimple.m; sourceTree = "<group>"; };
 		FA3632BB21E88A3600ADCDD8 /* JMOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMOperation.h; sourceTree = "<group>"; };
 		FA3632BC21E88A3600ADCDD8 /* JMOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMOperation.m; sourceTree = "<group>"; };
+		FA828CD82BA2EE3F00EAD006 /* RuntimrSimple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimrSimple.h; sourceTree = "<group>"; };
+		FA828CD92BA2EE3F00EAD006 /* RuntimrSimple.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimrSimple.m; sourceTree = "<group>"; };
+		FA828CDB2BA2EE5C00EAD006 /* testManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testManager.h; sourceTree = "<group>"; };
+		FA828CDC2BA2EE5C00EAD006 /* testManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,11 +77,11 @@
 		48075C7A21E49E8C0063CA8D /* BaseAlgorithm */ = {
 			isa = PBXGroup;
 			children = (
+				FA828CD72BA2EE1E00EAD006 /* RuntimeSimple */,
 				FA3632B721E8826C00ADCDD8 /* NSOperation */,
 				FA3632B321E82D8700ADCDD8 /* GCD */,
 				48075C9921E59F350063CA8D /* SortAlgorithm */,
 				48075C9521E5767D0063CA8D /* BinaryTree */,
-				48075C9421E576630063CA8D /* LinkedList */,
 				48075C7B21E49E8C0063CA8D /* AppDelegate.h */,
 				48075C7C21E49E8C0063CA8D /* AppDelegate.m */,
 				48075C8121E49E8C0063CA8D /* SortViewController.h */,
@@ -86,13 +92,6 @@
 				48075C8D21E49E910063CA8D /* main.m */,
 			);
 			path = BaseAlgorithm;
-			sourceTree = "<group>";
-		};
-		48075C9421E576630063CA8D /* LinkedList */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LinkedList;
 			sourceTree = "<group>";
 		};
 		48075C9521E5767D0063CA8D /* BinaryTree */ = {
@@ -131,6 +130,17 @@
 				FA3632BC21E88A3600ADCDD8 /* JMOperation.m */,
 			);
 			path = NSOperation;
+			sourceTree = "<group>";
+		};
+		FA828CD72BA2EE1E00EAD006 /* RuntimeSimple */ = {
+			isa = PBXGroup;
+			children = (
+				FA828CD82BA2EE3F00EAD006 /* RuntimrSimple.h */,
+				FA828CD92BA2EE3F00EAD006 /* RuntimrSimple.m */,
+				FA828CDB2BA2EE5C00EAD006 /* testManager.h */,
+				FA828CDC2BA2EE5C00EAD006 /* testManager.m */,
+			);
+			path = RuntimeSimple;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +216,8 @@
 				48075C8321E49E8C0063CA8D /* SortViewController.m in Sources */,
 				FA3632BA21E8828600ADCDD8 /* NSOperationSimple.m in Sources */,
 				48075C7D21E49E8C0063CA8D /* AppDelegate.m in Sources */,
+				FA828CDA2BA2EE3F00EAD006 /* RuntimrSimple.m in Sources */,
+				FA828CDD2BA2EE5C00EAD006 /* testManager.m in Sources */,
 				48075C9821E576B30063CA8D /* BinaryTreeNode.m in Sources */,
 				48075C8E21E49E910063CA8D /* main.m in Sources */,
 				FA3632B621E82DA400ADCDD8 /* GCDSimple.m in Sources */,
@@ -262,7 +274,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -322,7 +334,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
