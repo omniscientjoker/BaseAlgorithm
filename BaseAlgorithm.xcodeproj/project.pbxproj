@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		48075C8E21E49E910063CA8D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48075C8D21E49E910063CA8D /* main.m */; };
 		48075C9821E576B30063CA8D /* BinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 48075C9721E576B30063CA8D /* BinaryTreeNode.m */; };
 		48075C9C21E59F560063CA8D /* SortAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 48075C9B21E59F560063CA8D /* SortAlgorithm.m */; };
+		FA03691C2BA6CA4E0039D890 /* MethodClassA.m in Sources */ = {isa = PBXBuildFile; fileRef = FA03691B2BA6CA4E0039D890 /* MethodClassA.m */; };
+		FA03691F2BA6CA5D0039D890 /* MethodClassB.m in Sources */ = {isa = PBXBuildFile; fileRef = FA03691E2BA6CA5D0039D890 /* MethodClassB.m */; };
 		FA3632B621E82DA400ADCDD8 /* GCDSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3632B521E82DA400ADCDD8 /* GCDSimple.m */; };
 		FA3632BA21E8828600ADCDD8 /* NSOperationSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3632B921E8828600ADCDD8 /* NSOperationSimple.m */; };
 		FA3632BD21E88A3600ADCDD8 /* JMOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3632BC21E88A3600ADCDD8 /* JMOperation.m */; };
@@ -35,6 +37,10 @@
 		48075C9721E576B30063CA8D /* BinaryTreeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTreeNode.m; sourceTree = "<group>"; };
 		48075C9A21E59F560063CA8D /* SortAlgorithm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortAlgorithm.h; sourceTree = "<group>"; };
 		48075C9B21E59F560063CA8D /* SortAlgorithm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortAlgorithm.m; sourceTree = "<group>"; };
+		FA03691A2BA6CA4E0039D890 /* MethodClassA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MethodClassA.h; sourceTree = "<group>"; };
+		FA03691B2BA6CA4E0039D890 /* MethodClassA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MethodClassA.m; sourceTree = "<group>"; };
+		FA03691D2BA6CA5D0039D890 /* MethodClassB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MethodClassB.h; sourceTree = "<group>"; };
+		FA03691E2BA6CA5D0039D890 /* MethodClassB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MethodClassB.m; sourceTree = "<group>"; };
 		FA3632B421E82DA400ADCDD8 /* GCDSimple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDSimple.h; sourceTree = "<group>"; };
 		FA3632B521E82DA400ADCDD8 /* GCDSimple.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDSimple.m; sourceTree = "<group>"; };
 		FA3632B821E8828600ADCDD8 /* NSOperationSimple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSOperationSimple.h; sourceTree = "<group>"; };
@@ -139,6 +145,10 @@
 				FA828CD92BA2EE3F00EAD006 /* RuntimrSimple.m */,
 				FA828CDB2BA2EE5C00EAD006 /* testManager.h */,
 				FA828CDC2BA2EE5C00EAD006 /* testManager.m */,
+				FA03691A2BA6CA4E0039D890 /* MethodClassA.h */,
+				FA03691B2BA6CA4E0039D890 /* MethodClassA.m */,
+				FA03691D2BA6CA5D0039D890 /* MethodClassB.h */,
+				FA03691E2BA6CA5D0039D890 /* MethodClassB.m */,
 			);
 			path = RuntimeSimple;
 			sourceTree = "<group>";
@@ -169,7 +179,8 @@
 		48075C7021E49E8C0063CA8D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1010;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1520;
 				ORGANIZATIONNAME = joker;
 				TargetAttributes = {
 					48075C7721E49E8C0063CA8D = {
@@ -214,8 +225,10 @@
 			files = (
 				FA3632BD21E88A3600ADCDD8 /* JMOperation.m in Sources */,
 				48075C8321E49E8C0063CA8D /* SortViewController.m in Sources */,
+				FA03691F2BA6CA5D0039D890 /* MethodClassB.m in Sources */,
 				FA3632BA21E8828600ADCDD8 /* NSOperationSimple.m in Sources */,
 				48075C7D21E49E8C0063CA8D /* AppDelegate.m in Sources */,
+				FA03691C2BA6CA4E0039D890 /* MethodClassA.m in Sources */,
 				FA828CDA2BA2EE3F00EAD006 /* RuntimrSimple.m in Sources */,
 				FA828CDD2BA2EE5C00EAD006 /* testManager.m in Sources */,
 				48075C9821E576B30063CA8D /* BinaryTreeNode.m in Sources */,
@@ -265,6 +278,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -276,6 +290,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -324,6 +339,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -335,6 +351,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

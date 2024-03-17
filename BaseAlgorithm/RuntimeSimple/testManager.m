@@ -14,6 +14,7 @@
 }
 
 +(void)justTest:(NSString*)message{
+    
     NSLog(@"testManager class method %@",message);
 }
 @end

@@ -11,13 +11,14 @@
 #import "RuntimeSimple/RuntimrSimple.h"
 @interface SortViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)NSArray<NSArray*>* titleArr;
+@property(nonatomic,strong)RuntimrSimple * runtimrSimple;
 @end
 
 @implementation SortViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"算法基础";
-    self.titleArr = @[@[@"冒泡排序",@"插入排序",@"选择排序",@"归并排序",@"快速排序",@"堆排序",@"桶排序"],@[@"runtime-imp"]];
+    self.titleArr = @[@[@"冒泡排序",@"插入排序",@"选择排序",@"归并排序",@"快速排序",@"堆排序",@"桶排序"],@[@"runtime-imp",@"MethodSwizzleA"]];
     
     UITableView *  tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height)];
     tableView.tableFooterView = [[UIView alloc] init];
@@ -86,12 +87,23 @@
     } else if (indexPath.section == 1){
         switch (indexPath.row) {
             case 0:
-                [RuntimrSimple test];
+                [self.runtimrSimple test];
                 break;
-            
+            case 1:
+                [self.runtimrSimple changeMethodSwizzle2];
+                break;
             default:
                 break;
         }
     }
+}
+
+
+
+-(RuntimrSimple *)runtimrSimple{
+    if (!_runtimrSimple) {
+        _runtimrSimple = [[RuntimrSimple alloc] init];
+    }
+    return _runtimrSimple;
 }
 @end
