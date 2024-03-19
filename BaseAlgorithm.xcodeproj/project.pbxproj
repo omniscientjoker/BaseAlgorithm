@@ -16,11 +16,17 @@
 		48075C9C21E59F560063CA8D /* SortAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 48075C9B21E59F560063CA8D /* SortAlgorithm.m */; };
 		FA03691C2BA6CA4E0039D890 /* MethodClassA.m in Sources */ = {isa = PBXBuildFile; fileRef = FA03691B2BA6CA4E0039D890 /* MethodClassA.m */; };
 		FA03691F2BA6CA5D0039D890 /* MethodClassB.m in Sources */ = {isa = PBXBuildFile; fileRef = FA03691E2BA6CA5D0039D890 /* MethodClassB.m */; };
+		FA1DC1952BA82067000920F3 /* RunloopSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1DC1942BA82067000920F3 /* RunloopSimple.m */; };
+		FA1DC1992BA82AA3000920F3 /* KVOSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1DC1982BA82AA3000920F3 /* KVOSimple.m */; };
+		FA1DC19D2BA919AA000920F3 /* BlockSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1DC19C2BA919AA000920F3 /* BlockSimple.m */; };
+		FA1DC1A12BA91A33000920F3 /* SimpleConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1DC1A02BA91A33000920F3 /* SimpleConfigManager.m */; };
+		FA1DC1A42BA91D05000920F3 /* SimpleMode.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1DC1A32BA91D05000920F3 /* SimpleMode.m */; };
+		FA1DC1A82BA93A2D000920F3 /* BlockSimpleCode.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1DC1A72BA93A2D000920F3 /* BlockSimpleCode.m */; };
+		FA1DC1AD2BA93AD6000920F3 /* BlockSimpleCCode.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1DC1AC2BA93AD6000920F3 /* BlockSimpleCCode.m */; };
 		FA3632B621E82DA400ADCDD8 /* GCDSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3632B521E82DA400ADCDD8 /* GCDSimple.m */; };
 		FA3632BA21E8828600ADCDD8 /* NSOperationSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3632B921E8828600ADCDD8 /* NSOperationSimple.m */; };
 		FA3632BD21E88A3600ADCDD8 /* JMOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3632BC21E88A3600ADCDD8 /* JMOperation.m */; };
 		FA828CDA2BA2EE3F00EAD006 /* RuntimrSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = FA828CD92BA2EE3F00EAD006 /* RuntimrSimple.m */; };
-		FA828CDD2BA2EE5C00EAD006 /* testManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA828CDC2BA2EE5C00EAD006 /* testManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +47,20 @@
 		FA03691B2BA6CA4E0039D890 /* MethodClassA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MethodClassA.m; sourceTree = "<group>"; };
 		FA03691D2BA6CA5D0039D890 /* MethodClassB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MethodClassB.h; sourceTree = "<group>"; };
 		FA03691E2BA6CA5D0039D890 /* MethodClassB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MethodClassB.m; sourceTree = "<group>"; };
+		FA1DC1932BA82067000920F3 /* RunloopSimple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunloopSimple.h; sourceTree = "<group>"; };
+		FA1DC1942BA82067000920F3 /* RunloopSimple.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunloopSimple.m; sourceTree = "<group>"; };
+		FA1DC1972BA82AA3000920F3 /* KVOSimple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOSimple.h; sourceTree = "<group>"; };
+		FA1DC1982BA82AA3000920F3 /* KVOSimple.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOSimple.m; sourceTree = "<group>"; };
+		FA1DC19B2BA919AA000920F3 /* BlockSimple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockSimple.h; sourceTree = "<group>"; };
+		FA1DC19C2BA919AA000920F3 /* BlockSimple.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockSimple.m; sourceTree = "<group>"; };
+		FA1DC19F2BA91A33000920F3 /* SimpleConfigManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleConfigManager.h; sourceTree = "<group>"; };
+		FA1DC1A02BA91A33000920F3 /* SimpleConfigManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleConfigManager.m; sourceTree = "<group>"; };
+		FA1DC1A22BA91D05000920F3 /* SimpleMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleMode.h; sourceTree = "<group>"; };
+		FA1DC1A32BA91D05000920F3 /* SimpleMode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleMode.m; sourceTree = "<group>"; };
+		FA1DC1A52BA92461000920F3 /* SimpleBaseMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleBaseMacros.h; sourceTree = "<group>"; };
+		FA1DC1A62BA93A2D000920F3 /* BlockSimpleCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockSimpleCode.h; sourceTree = "<group>"; };
+		FA1DC1A72BA93A2D000920F3 /* BlockSimpleCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockSimpleCode.m; sourceTree = "<group>"; };
+		FA1DC1AC2BA93AD6000920F3 /* BlockSimpleCCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockSimpleCCode.m; sourceTree = "<group>"; };
 		FA3632B421E82DA400ADCDD8 /* GCDSimple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDSimple.h; sourceTree = "<group>"; };
 		FA3632B521E82DA400ADCDD8 /* GCDSimple.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDSimple.m; sourceTree = "<group>"; };
 		FA3632B821E8828600ADCDD8 /* NSOperationSimple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSOperationSimple.h; sourceTree = "<group>"; };
@@ -49,8 +69,6 @@
 		FA3632BC21E88A3600ADCDD8 /* JMOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMOperation.m; sourceTree = "<group>"; };
 		FA828CD82BA2EE3F00EAD006 /* RuntimrSimple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimrSimple.h; sourceTree = "<group>"; };
 		FA828CD92BA2EE3F00EAD006 /* RuntimrSimple.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimrSimple.m; sourceTree = "<group>"; };
-		FA828CDB2BA2EE5C00EAD006 /* testManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testManager.h; sourceTree = "<group>"; };
-		FA828CDC2BA2EE5C00EAD006 /* testManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +101,10 @@
 		48075C7A21E49E8C0063CA8D /* BaseAlgorithm */ = {
 			isa = PBXGroup;
 			children = (
+				FA1DC19E2BA91A14000920F3 /* Tools */,
+				FA1DC19A2BA91993000920F3 /* BlockSimple */,
+				FA1DC1962BA82A90000920F3 /* KVOSimple */,
+				FA1DC1922BA8204E000920F3 /* RunLoopSimple */,
 				FA828CD72BA2EE1E00EAD006 /* RuntimeSimple */,
 				FA3632B721E8826C00ADCDD8 /* NSOperation */,
 				FA3632B321E82D8700ADCDD8 /* GCD */,
@@ -118,6 +140,48 @@
 			path = SortAlgorithm;
 			sourceTree = "<group>";
 		};
+		FA1DC1922BA8204E000920F3 /* RunLoopSimple */ = {
+			isa = PBXGroup;
+			children = (
+				FA1DC1932BA82067000920F3 /* RunloopSimple.h */,
+				FA1DC1942BA82067000920F3 /* RunloopSimple.m */,
+			);
+			path = RunLoopSimple;
+			sourceTree = "<group>";
+		};
+		FA1DC1962BA82A90000920F3 /* KVOSimple */ = {
+			isa = PBXGroup;
+			children = (
+				FA1DC1972BA82AA3000920F3 /* KVOSimple.h */,
+				FA1DC1982BA82AA3000920F3 /* KVOSimple.m */,
+			);
+			path = KVOSimple;
+			sourceTree = "<group>";
+		};
+		FA1DC19A2BA91993000920F3 /* BlockSimple */ = {
+			isa = PBXGroup;
+			children = (
+				FA1DC19B2BA919AA000920F3 /* BlockSimple.h */,
+				FA1DC19C2BA919AA000920F3 /* BlockSimple.m */,
+				FA1DC1A62BA93A2D000920F3 /* BlockSimpleCode.h */,
+				FA1DC1A72BA93A2D000920F3 /* BlockSimpleCode.m */,
+				FA1DC1AC2BA93AD6000920F3 /* BlockSimpleCCode.m */,
+			);
+			path = BlockSimple;
+			sourceTree = "<group>";
+		};
+		FA1DC19E2BA91A14000920F3 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				FA1DC19F2BA91A33000920F3 /* SimpleConfigManager.h */,
+				FA1DC1A02BA91A33000920F3 /* SimpleConfigManager.m */,
+				FA1DC1A22BA91D05000920F3 /* SimpleMode.h */,
+				FA1DC1A32BA91D05000920F3 /* SimpleMode.m */,
+				FA1DC1A52BA92461000920F3 /* SimpleBaseMacros.h */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		FA3632B321E82D8700ADCDD8 /* GCD */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,8 +207,6 @@
 			children = (
 				FA828CD82BA2EE3F00EAD006 /* RuntimrSimple.h */,
 				FA828CD92BA2EE3F00EAD006 /* RuntimrSimple.m */,
-				FA828CDB2BA2EE5C00EAD006 /* testManager.h */,
-				FA828CDC2BA2EE5C00EAD006 /* testManager.m */,
 				FA03691A2BA6CA4E0039D890 /* MethodClassA.h */,
 				FA03691B2BA6CA4E0039D890 /* MethodClassA.m */,
 				FA03691D2BA6CA5D0039D890 /* MethodClassB.h */,
@@ -223,16 +285,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1DC1952BA82067000920F3 /* RunloopSimple.m in Sources */,
+				FA1DC1A82BA93A2D000920F3 /* BlockSimpleCode.m in Sources */,
 				FA3632BD21E88A3600ADCDD8 /* JMOperation.m in Sources */,
 				48075C8321E49E8C0063CA8D /* SortViewController.m in Sources */,
 				FA03691F2BA6CA5D0039D890 /* MethodClassB.m in Sources */,
 				FA3632BA21E8828600ADCDD8 /* NSOperationSimple.m in Sources */,
 				48075C7D21E49E8C0063CA8D /* AppDelegate.m in Sources */,
+				FA1DC1A42BA91D05000920F3 /* SimpleMode.m in Sources */,
+				FA1DC1AD2BA93AD6000920F3 /* BlockSimpleCCode.m in Sources */,
 				FA03691C2BA6CA4E0039D890 /* MethodClassA.m in Sources */,
 				FA828CDA2BA2EE3F00EAD006 /* RuntimrSimple.m in Sources */,
-				FA828CDD2BA2EE5C00EAD006 /* testManager.m in Sources */,
 				48075C9821E576B30063CA8D /* BinaryTreeNode.m in Sources */,
+				FA1DC1992BA82AA3000920F3 /* KVOSimple.m in Sources */,
 				48075C8E21E49E910063CA8D /* main.m in Sources */,
+				FA1DC1A12BA91A33000920F3 /* SimpleConfigManager.m in Sources */,
+				FA1DC19D2BA919AA000920F3 /* BlockSimple.m in Sources */,
 				FA3632B621E82DA400ADCDD8 /* GCDSimple.m in Sources */,
 				48075C9C21E59F560063CA8D /* SortAlgorithm.m in Sources */,
 			);

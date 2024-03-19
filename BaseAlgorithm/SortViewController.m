@@ -7,18 +7,27 @@
 //
 
 #import "SortViewController.h"
+
+#import "KVOSimple/KVOSimple.h"
+#import "BlockSimple/BlockSimple.h"
 #import "SortAlgorithm/SortAlgorithm.h"
 #import "RuntimeSimple/RuntimrSimple.h"
+#import "RunLoopSimple/RunloopSimple.h"
+
+
 @interface SortViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)NSArray<NSArray*>* titleArr;
-@property(nonatomic,strong)RuntimrSimple * runtimrSimple;
+@property(nonatomic,strong)RuntimrSimple * runtimeSimple;
+@property(nonatomic,strong)RunloopSimple * runloopSimple;
+@property(nonatomic,strong)KVOSimple     * kvoSimple;
+@property(nonatomic,strong)BlockSimple   * blockSimple;
 @end
 
 @implementation SortViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"算法基础";
-    self.titleArr = @[@[@"冒泡排序",@"插入排序",@"选择排序",@"归并排序",@"快速排序",@"堆排序",@"桶排序"],@[@"runtime-imp",@"MethodSwizzleA"]];
+    self.navigationItem.title = @"基础";
+    self.titleArr = @[@[@"冒泡排序",@"插入排序",@"选择排序",@"归并排序",@"快速排序",@"堆排序",@"桶排序"],@[@"runtime-imp",@"MethodSwizzleA"],@[@"runloop"],@[@"kvoADD",@"kvoChanged"],@[@"blockTest"]];
     
     UITableView *  tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height)];
     tableView.tableFooterView = [[UIView alloc] init];
@@ -87,10 +96,40 @@
     } else if (indexPath.section == 1){
         switch (indexPath.row) {
             case 0:
-                [self.runtimrSimple test];
+                [self.runtimeSimple test];
                 break;
             case 1:
-                [self.runtimrSimple changeMethodSwizzle2];
+                [self.runtimeSimple changeMethodSwizzle2];
+                break;
+            default:
+                break;
+        }
+    } else if (indexPath.section == 2){
+        switch (indexPath.row) {
+            case 0:
+                [self.runloopSimple testRunloop];
+                break;
+            default:
+                break;
+        }
+    } else if (indexPath.section == 3){
+        switch (indexPath.row) {
+            case 0:
+                [self.kvoSimple testKVO];
+                break;
+            case 1:
+                [self.kvoSimple changeValue];
+                break;
+            default:
+                break;
+        }
+    } else if (indexPath.section == 4){
+        switch (indexPath.row) {
+            case 0:
+                [self.blockSimple testBlock];
+                break;
+            case 1:
+                [self.kvoSimple changeValue];
                 break;
             default:
                 break;
@@ -98,12 +137,32 @@
     }
 }
 
-
-
--(RuntimrSimple *)runtimrSimple{
-    if (!_runtimrSimple) {
-        _runtimrSimple = [[RuntimrSimple alloc] init];
+#pragma mark ---- get
+-(KVOSimple *)kvoSimple{
+    if (!_kvoSimple) {
+        _kvoSimple = [[KVOSimple alloc] init];
     }
-    return _runtimrSimple;
+    return _kvoSimple;
+}
+
+-(RunloopSimple *)runloopSimple{
+    if (!_runloopSimple) {
+        _runloopSimple = [[RunloopSimple alloc] init];
+    }
+    return _runloopSimple;
+}
+
+-(RuntimrSimple *)runtimeSimple{
+    if (!_runtimeSimple) {
+        _runtimeSimple = [[RuntimrSimple alloc] init];
+    }
+    return _runtimeSimple;
+}
+
+- (BlockSimple *)blockSimple{
+    if (!_blockSimple) {
+        _blockSimple = [[BlockSimple alloc] init];
+    }
+    return _blockSimple;
 }
 @end

@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
+@interface testManager : NSObject
+@end
+
 
 @interface RuntimrSimple : NSObject
 -(void)test;

@@ -7,10 +7,22 @@
 //
 
 #import "RuntimrSimple.h"
+
 #import <objc/runtime.h>
 
 #import "MethodClassA.h"
 #import "MethodClassB.h"
+
+@implementation testManager
+-(void)justTest:(NSString*)message{
+    NSLog(@"testManager instance method %@",message);
+}
++(void)justTest:(NSString*)message{
+    
+    NSLog(@"testManager class method %@",message);
+}
+@end
+
 
 @implementation RuntimrSimple
 -(void)test{
@@ -41,21 +53,6 @@
     [classA methodA];
     [classB methodB];
 }
-
-+ (BOOL)isKindOfClass:(Class)cls {
-    for (Class tcls = self->ISA(); tcls; tcls = tcls->superclass) {
-        if (tcls == cls) return YES;
-    }
-    return NO;
-}
-
-- (BOOL)isKindOfClass:(Class)cls {
-    for (Class tcls = [self class]; tcls; tcls = tcls->superclass) {
-        if (tcls == cls) return YES;
-    }
-    return NO;
-}
-
 
 void changeMethodSwizzle2(Class class, SEL originalSEL, SEL replacementSEL){
     //如果子类没有实现相应的方法，则会返回父类的方法。
