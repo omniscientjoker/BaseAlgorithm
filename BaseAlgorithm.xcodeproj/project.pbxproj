@@ -23,9 +23,17 @@
 		FA1DC1A42BA91D05000920F3 /* SimpleMode.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1DC1A32BA91D05000920F3 /* SimpleMode.m */; };
 		FA1DC1A82BA93A2D000920F3 /* BlockSimpleCode.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1DC1A72BA93A2D000920F3 /* BlockSimpleCode.m */; };
 		FA1DC1AD2BA93AD6000920F3 /* BlockSimpleCCode.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1DC1AC2BA93AD6000920F3 /* BlockSimpleCCode.m */; };
+		FA1DC1B12BAAD4DC000920F3 /* SimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1DC1B02BAAD4DC000920F3 /* SimpleViewController.m */; };
+		FA1DC1B42BAAD516000920F3 /* SimpleView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1DC1B32BAAD516000920F3 /* SimpleView.m */; };
+		FA1DC1C02BAD2837000920F3 /* MvcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1DC1BF2BAD2837000920F3 /* MvcViewController.m */; };
+		FA1DC1C32BAD2851000920F3 /* MvcModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1DC1C22BAD2851000920F3 /* MvcModel.m */; };
+		FA1DC1C62BAD2862000920F3 /* MvcView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1DC1C52BAD2862000920F3 /* MvcView.m */; };
 		FA3632B621E82DA400ADCDD8 /* GCDSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3632B521E82DA400ADCDD8 /* GCDSimple.m */; };
 		FA3632BA21E8828600ADCDD8 /* NSOperationSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3632B921E8828600ADCDD8 /* NSOperationSimple.m */; };
 		FA3632BD21E88A3600ADCDD8 /* JMOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3632BC21E88A3600ADCDD8 /* JMOperation.m */; };
+		FA7567DC2BAD70B800408700 /* UIButton+hook.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7567DB2BAD70B800408700 /* UIButton+hook.m */; };
+		FA7567E22BAD73EF00408700 /* TvRemort.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7567E12BAD73EF00408700 /* TvRemort.m */; };
+		FA7567E52BAD751600408700 /* imageType.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7567E42BAD751600408700 /* imageType.m */; };
 		FA828CDA2BA2EE3F00EAD006 /* RuntimrSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = FA828CD92BA2EE3F00EAD006 /* RuntimrSimple.m */; };
 /* End PBXBuildFile section */
 
@@ -61,12 +69,29 @@
 		FA1DC1A62BA93A2D000920F3 /* BlockSimpleCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockSimpleCode.h; sourceTree = "<group>"; };
 		FA1DC1A72BA93A2D000920F3 /* BlockSimpleCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockSimpleCode.m; sourceTree = "<group>"; };
 		FA1DC1AC2BA93AD6000920F3 /* BlockSimpleCCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockSimpleCCode.m; sourceTree = "<group>"; };
+		FA1DC1AF2BAAD4DC000920F3 /* SimpleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleViewController.h; sourceTree = "<group>"; };
+		FA1DC1B02BAAD4DC000920F3 /* SimpleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleViewController.m; sourceTree = "<group>"; };
+		FA1DC1B22BAAD516000920F3 /* SimpleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleView.h; sourceTree = "<group>"; };
+		FA1DC1B32BAAD516000920F3 /* SimpleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleView.m; sourceTree = "<group>"; };
+		FA1DC1BE2BAD2837000920F3 /* MvcViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MvcViewController.h; sourceTree = "<group>"; };
+		FA1DC1BF2BAD2837000920F3 /* MvcViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MvcViewController.m; sourceTree = "<group>"; };
+		FA1DC1C12BAD2851000920F3 /* MvcModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MvcModel.h; sourceTree = "<group>"; };
+		FA1DC1C22BAD2851000920F3 /* MvcModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MvcModel.m; sourceTree = "<group>"; };
+		FA1DC1C42BAD2862000920F3 /* MvcView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MvcView.h; sourceTree = "<group>"; };
+		FA1DC1C52BAD2862000920F3 /* MvcView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MvcView.m; sourceTree = "<group>"; };
 		FA3632B421E82DA400ADCDD8 /* GCDSimple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDSimple.h; sourceTree = "<group>"; };
 		FA3632B521E82DA400ADCDD8 /* GCDSimple.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDSimple.m; sourceTree = "<group>"; };
 		FA3632B821E8828600ADCDD8 /* NSOperationSimple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSOperationSimple.h; sourceTree = "<group>"; };
 		FA3632B921E8828600ADCDD8 /* NSOperationSimple.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSOperationSimple.m; sourceTree = "<group>"; };
 		FA3632BB21E88A3600ADCDD8 /* JMOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMOperation.h; sourceTree = "<group>"; };
 		FA3632BC21E88A3600ADCDD8 /* JMOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMOperation.m; sourceTree = "<group>"; };
+		FA7567DA2BAD70B800408700 /* UIButton+hook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+hook.h"; sourceTree = "<group>"; };
+		FA7567DB2BAD70B800408700 /* UIButton+hook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+hook.m"; sourceTree = "<group>"; };
+		FA7567DF2BAD739A00408700 /* TvRemortImp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TvRemortImp.h; sourceTree = "<group>"; };
+		FA7567E02BAD73EF00408700 /* TvRemort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TvRemort.h; sourceTree = "<group>"; };
+		FA7567E12BAD73EF00408700 /* TvRemort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TvRemort.m; sourceTree = "<group>"; };
+		FA7567E32BAD751600408700 /* imageType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = imageType.h; sourceTree = "<group>"; };
+		FA7567E42BAD751600408700 /* imageType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = imageType.m; sourceTree = "<group>"; };
 		FA828CD82BA2EE3F00EAD006 /* RuntimrSimple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimrSimple.h; sourceTree = "<group>"; };
 		FA828CD92BA2EE3F00EAD006 /* RuntimrSimple.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimrSimple.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +126,8 @@
 		48075C7A21E49E8C0063CA8D /* BaseAlgorithm */ = {
 			isa = PBXGroup;
 			children = (
+				FA1DC1B92BAD27F1000920F3 /* FrameWorkSimple */,
+				FA1DC1AE2BAAD4C1000920F3 /* SimpleView */,
 				FA1DC19E2BA91A14000920F3 /* Tools */,
 				FA1DC19A2BA91993000920F3 /* BlockSimple */,
 				FA1DC1962BA82A90000920F3 /* KVOSimple */,
@@ -182,6 +209,66 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		FA1DC1AE2BAAD4C1000920F3 /* SimpleView */ = {
+			isa = PBXGroup;
+			children = (
+				FA7567DD2BAD70FB00408700 /* extension */,
+				FA1DC1B52BAC1C94000920F3 /* category */,
+				FA1DC1AF2BAAD4DC000920F3 /* SimpleViewController.h */,
+				FA1DC1B02BAAD4DC000920F3 /* SimpleViewController.m */,
+				FA1DC1B22BAAD516000920F3 /* SimpleView.h */,
+				FA1DC1B32BAAD516000920F3 /* SimpleView.m */,
+			);
+			path = SimpleView;
+			sourceTree = "<group>";
+		};
+		FA1DC1B52BAC1C94000920F3 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				FA7567DA2BAD70B800408700 /* UIButton+hook.h */,
+				FA7567DB2BAD70B800408700 /* UIButton+hook.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		FA1DC1B92BAD27F1000920F3 /* FrameWorkSimple */ = {
+			isa = PBXGroup;
+			children = (
+				FA7567DE2BAD735E00408700 /* BridgeSimple */,
+				FA1DC1BC2BAD2815000920F3 /* MVVM */,
+				FA1DC1BB2BAD280F000920F3 /* MVP */,
+				FA1DC1BA2BAD2808000920F3 /* MVC */,
+			);
+			path = FrameWorkSimple;
+			sourceTree = "<group>";
+		};
+		FA1DC1BA2BAD2808000920F3 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				FA1DC1BE2BAD2837000920F3 /* MvcViewController.h */,
+				FA1DC1BF2BAD2837000920F3 /* MvcViewController.m */,
+				FA1DC1C12BAD2851000920F3 /* MvcModel.h */,
+				FA1DC1C22BAD2851000920F3 /* MvcModel.m */,
+				FA1DC1C42BAD2862000920F3 /* MvcView.h */,
+				FA1DC1C52BAD2862000920F3 /* MvcView.m */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		FA1DC1BB2BAD280F000920F3 /* MVP */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MVP;
+			sourceTree = "<group>";
+		};
+		FA1DC1BC2BAD2815000920F3 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
 		FA3632B321E82D8700ADCDD8 /* GCD */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +287,25 @@
 				FA3632BC21E88A3600ADCDD8 /* JMOperation.m */,
 			);
 			path = NSOperation;
+			sourceTree = "<group>";
+		};
+		FA7567DD2BAD70FB00408700 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		FA7567DE2BAD735E00408700 /* BridgeSimple */ = {
+			isa = PBXGroup;
+			children = (
+				FA7567DF2BAD739A00408700 /* TvRemortImp.h */,
+				FA7567E02BAD73EF00408700 /* TvRemort.h */,
+				FA7567E12BAD73EF00408700 /* TvRemort.m */,
+				FA7567E32BAD751600408700 /* imageType.h */,
+				FA7567E42BAD751600408700 /* imageType.m */,
+			);
+			path = BridgeSimple;
 			sourceTree = "<group>";
 		};
 		FA828CD72BA2EE1E00EAD006 /* RuntimeSimple */ = {
@@ -290,17 +396,25 @@
 				FA3632BD21E88A3600ADCDD8 /* JMOperation.m in Sources */,
 				48075C8321E49E8C0063CA8D /* SortViewController.m in Sources */,
 				FA03691F2BA6CA5D0039D890 /* MethodClassB.m in Sources */,
+				FA7567E52BAD751600408700 /* imageType.m in Sources */,
+				FA7567E22BAD73EF00408700 /* TvRemort.m in Sources */,
 				FA3632BA21E8828600ADCDD8 /* NSOperationSimple.m in Sources */,
 				48075C7D21E49E8C0063CA8D /* AppDelegate.m in Sources */,
 				FA1DC1A42BA91D05000920F3 /* SimpleMode.m in Sources */,
 				FA1DC1AD2BA93AD6000920F3 /* BlockSimpleCCode.m in Sources */,
+				FA1DC1C32BAD2851000920F3 /* MvcModel.m in Sources */,
 				FA03691C2BA6CA4E0039D890 /* MethodClassA.m in Sources */,
 				FA828CDA2BA2EE3F00EAD006 /* RuntimrSimple.m in Sources */,
 				48075C9821E576B30063CA8D /* BinaryTreeNode.m in Sources */,
+				FA1DC1B42BAAD516000920F3 /* SimpleView.m in Sources */,
 				FA1DC1992BA82AA3000920F3 /* KVOSimple.m in Sources */,
 				48075C8E21E49E910063CA8D /* main.m in Sources */,
+				FA7567DC2BAD70B800408700 /* UIButton+hook.m in Sources */,
 				FA1DC1A12BA91A33000920F3 /* SimpleConfigManager.m in Sources */,
+				FA1DC1B12BAAD4DC000920F3 /* SimpleViewController.m in Sources */,
 				FA1DC19D2BA919AA000920F3 /* BlockSimple.m in Sources */,
+				FA1DC1C02BAD2837000920F3 /* MvcViewController.m in Sources */,
+				FA1DC1C62BAD2862000920F3 /* MvcView.m in Sources */,
 				FA3632B621E82DA400ADCDD8 /* GCDSimple.m in Sources */,
 				48075C9C21E59F560063CA8D /* SortAlgorithm.m in Sources */,
 			);

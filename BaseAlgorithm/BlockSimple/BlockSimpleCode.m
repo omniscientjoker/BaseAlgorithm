@@ -25,11 +25,11 @@
     self.object = [[NSObject alloc] init];
     __block int blockNum = 1;
     void(^aBlock)(void) = ^{
-//        NSLog(@"Hello world %@",obj);
-//        NSLog(@"Hello world %@",self.object);
-//        NSLog(@"Hello world %d == %@",staticNum,staticStr);
+        NSLog(@"Hello world %@",obj);
+        NSLog(@"Hello world %@",self.object);
+        NSLog(@"Hello world %d == %@",staticNum,staticStr);
         NSLog(@"Hello world %d == %@ == %d",num,str,blockNum);
-//        NSLog(@"Hello world %d == %@",self.propertyNum,self.propertyStr);
+        NSLog(@"Hello world %d == %@",self.propertyNum,self.propertyStr);
     };
     aBlock();
 }

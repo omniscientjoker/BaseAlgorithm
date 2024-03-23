@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
--(void)loadBlcok{
-    void(^aBlock)(void) = ^{
-      NSLog(@"Hello world");
-    };
-    aBlock();
-}
+//-(void)loadBlcok{
+//    void(^aBlock)(void) = ^{
+//      NSLog(@"Hello world");
+//    };
+//    aBlock();
+//}

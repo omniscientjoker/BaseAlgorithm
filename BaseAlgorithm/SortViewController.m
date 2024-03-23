@@ -13,10 +13,11 @@
 #import "SortAlgorithm/SortAlgorithm.h"
 #import "RuntimeSimple/RuntimrSimple.h"
 #import "RunLoopSimple/RunloopSimple.h"
-
+#import "SimpleView/SimpleViewController.h"
 
 @interface SortViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)NSArray<NSArray*>* titleArr;
+@property(nonatomic,strong)NSArray<NSString*>* titleHeadArr;
 @property(nonatomic,strong)RuntimrSimple * runtimeSimple;
 @property(nonatomic,strong)RunloopSimple * runloopSimple;
 @property(nonatomic,strong)KVOSimple     * kvoSimple;
@@ -27,9 +28,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"基础";
-    self.titleArr = @[@[@"冒泡排序",@"插入排序",@"选择排序",@"归并排序",@"快速排序",@"堆排序",@"桶排序"],@[@"runtime-imp",@"MethodSwizzleA"],@[@"runloop"],@[@"kvoADD",@"kvoChanged"],@[@"blockTest"]];
+    self.titleArr = @[@[@"冒泡排序",@"插入排序",@"选择排序",@"归并排序",@"快速排序",@"堆排序",@"桶排序"],@[@"runtime-imp",@"MethodSwizzleA"],@[@"runloop"],@[@"kvoADD",@"kvoChanged"],@[@"blockTest"],@[@"simpleView"]];
+    self.titleHeadArr = @[@"算法",@"runtime",@"runloop",@"kvo",@"block",@"simpleView"];
     
-    UITableView *  tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height)];
+    UITableView *  tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-64)];
     tableView.tableFooterView = [[UIView alloc] init];
     tableView.backgroundColor = [UIColor clearColor];
     tableView.sectionFooterHeight = 4.0;
@@ -45,6 +47,14 @@
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return _titleArr.count;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return _titleHeadArr[section];
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 40;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -134,8 +144,23 @@
             default:
                 break;
         }
+    } else if (indexPath.section == 5){
+        switch (indexPath.row) {
+            case 0:
+                [self jumpSimpleView];
+                break;
+            default:
+                break;
+        }
     }
 }
+
+#pragma mark ---- fun
+- (void)jumpSimpleView{
+    [self.navigationController pushViewController:[[SimpleViewController alloc] init] animated:YES];
+}
+
+
 
 #pragma mark ---- get
 -(KVOSimple *)kvoSimple{

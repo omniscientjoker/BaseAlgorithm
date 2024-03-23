@@ -54,6 +54,22 @@
     [classB methodB];
 }
 
+-(void)changeMethodSwizzle2{
+    MethodClassA * classA = [[MethodClassA alloc] init];
+    [classA methodA];
+    [MethodClassA isKindOfClass:[NSObject class]];
+    [classA isKindOfClass:[NSObject class]];
+    [MethodClassA isSubclassOfClass:[NSObject class]];
+    MethodClassB * classB = [[MethodClassB alloc] init];
+    [classB methodB];
+    Method Bmethod = class_getInstanceMethod([MethodClassB class], @selector(methodB));
+    Method Amethod = class_getInstanceMethod([MethodClassA class], @selector(methodA));
+    method_exchangeImplementations(Bmethod, Amethod);
+    NSLog(@"MethodSwizzleAfter");
+    [classA methodA];
+    [classB methodB];
+}
+
 void changeMethodSwizzle2(Class class, SEL originalSEL, SEL replacementSEL){
     //如果子类没有实现相应的方法，则会返回父类的方法。
     Method originMethod = class_getInstanceMethod(class, originalSEL);
