@@ -17,7 +17,9 @@
 @end
 
 @implementation MvcViewController
-#pragma mark负责连接Model层跟View层，响应页面的事件和作为页面的代理以及界面跳转和生命周期的处理等任务
+/*
+ 负责连接Model层跟View层，响应页面的事件和作为页面的代理以及界面跳转和生命周期的处理等任务
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view = self.mvcView;

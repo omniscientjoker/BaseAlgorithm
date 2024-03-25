@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SortViewController : UIViewController
+@interface RootViewController : UIViewController
 
--(instancetype)initWithTitleArr:(NSArray*)titleArr;
 
 @end
 

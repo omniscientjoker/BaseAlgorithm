@@ -15,9 +15,14 @@
 #import "RunLoopSimple/RunloopSimple.h"
 #import "SimpleView/SimpleViewController.h"
 
+#import "CTMediator+Fundication.h"
+#import "CTMediator+PageJump.h"
+
+#import "ProtocolRouteMediator.h"
+#import "ProtocolRouteMediatorProtocol.h"
+
 @interface SortViewController ()<UITableViewDelegate,UITableViewDataSource>
-@property(nonatomic,strong)NSArray<NSArray*>* titleArr;
-@property(nonatomic,strong)NSArray<NSString*>* titleHeadArr;
+@property(nonatomic,strong)NSArray* titleArr;
 @property(nonatomic,strong)RuntimrSimple * runtimeSimple;
 @property(nonatomic,strong)RunloopSimple * runloopSimple;
 @property(nonatomic,strong)KVOSimple     * kvoSimple;
@@ -25,12 +30,17 @@
 @end
 
 @implementation SortViewController
+-(instancetype)initWithTitleArr:(NSArray*)titleArr{
+    self = [super init];
+    if (self) {
+        self.titleArr = [NSArray arrayWithArray:titleArr];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"基础";
-    self.titleArr = @[@[@"冒泡排序",@"插入排序",@"选择排序",@"归并排序",@"快速排序",@"堆排序",@"桶排序"],@[@"runtime-imp",@"MethodSwizzleA"],@[@"runloop"],@[@"kvoADD",@"kvoChanged"],@[@"blockTest"],@[@"simpleView"]];
-    self.titleHeadArr = @[@"算法",@"runtime",@"runloop",@"kvo",@"block",@"simpleView"];
-    
     UITableView *  tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-64)];
     tableView.tableFooterView = [[UIView alloc] init];
     tableView.backgroundColor = [UIColor clearColor];
@@ -42,117 +52,105 @@
 }
 #pragma mark - tableview dataSoure and  delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return _titleArr[section].count;
-}
-
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return _titleArr.count;
-}
-
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    return _titleHeadArr[section];
-}
-
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 40;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell=[[UITableViewCell alloc] init];
-    cell.textLabel.text = _titleArr[indexPath.section][indexPath.row];
+    cell.textLabel.text = _titleArr[indexPath.row];
     return cell;
 }
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 50;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (indexPath.section == 0) {
+    UITableViewCell * selectedCell = [tableView cellForRowAtIndexPath:indexPath];
+    NSString * cellTitle = selectedCell.textLabel.text;
+    // 排序算法
+    if ([cellTitle isEqualToString:@"冒泡排序"]) {
         NSMutableArray * arr = [NSMutableArray arrayWithObjects:@10,@11,@9,@13,@8,@5,@14,@4,@16,@6,@17,@1,@21,nil];
-        switch (indexPath.row) {
-            case 0:
-                //冒泡排序
-                [SortAlgorithm bubbleSortArr:arr];
-                break;
-            case 1:
-                //插入排序
-                [SortAlgorithm insertSortArr:arr];
-                break;
-            case 2:
-                //选择排序
-                [SortAlgorithm selectionSortArr:arr];
-                break;
-            case 3:
-                //归并排序
-                [SortAlgorithm megerSortArr:arr];
-                break;
-            case 4:
-                //快速排序
-                [SortAlgorithm quickSortArr:arr leftIndex:0 rightIndex:arr.count-1];
-                break;
-            case 5:
-                //堆排序
-                [SortAlgorithm heapSortArr:arr];
-                break;
-            case 6:
-                //桶排序
-                [SortAlgorithm radixSortArr:arr];
-                break;
-            default:
-                break;
-        }
-        NSLog(@"%@",arr);
-    } else if (indexPath.section == 1){
-        switch (indexPath.row) {
-            case 0:
-                [self.runtimeSimple test];
-                break;
-            case 1:
-                [self.runtimeSimple changeMethodSwizzle2];
-                break;
-            default:
-                break;
-        }
-    } else if (indexPath.section == 2){
-        switch (indexPath.row) {
-            case 0:
-                [self.runloopSimple testRunloop];
-                break;
-            default:
-                break;
-        }
-    } else if (indexPath.section == 3){
-        switch (indexPath.row) {
-            case 0:
-                [self.kvoSimple testKVO];
-                break;
-            case 1:
-                [self.kvoSimple changeValue];
-                break;
-            default:
-                break;
-        }
-    } else if (indexPath.section == 4){
-        switch (indexPath.row) {
-            case 0:
-                [self.blockSimple testBlock];
-                break;
-            case 1:
-                [self.kvoSimple changeValue];
-                break;
-            default:
-                break;
-        }
-    } else if (indexPath.section == 5){
-        switch (indexPath.row) {
-            case 0:
-                [self jumpSimpleView];
-                break;
-            default:
-                break;
-        }
+        [SortAlgorithm bubbleSortArr:arr];
     }
+    if ([cellTitle isEqualToString:@"插入排序"]) {
+        NSMutableArray * arr = [NSMutableArray arrayWithObjects:@10,@11,@9,@13,@8,@5,@14,@4,@16,@6,@17,@1,@21,nil];
+        [SortAlgorithm insertSortArr:arr];
+    }
+    if ([cellTitle isEqualToString:@"选择排序"]) {
+        NSMutableArray * arr = [NSMutableArray arrayWithObjects:@10,@11,@9,@13,@8,@5,@14,@4,@16,@6,@17,@1,@21,nil];
+        [SortAlgorithm selectionSortArr:arr];
+    }
+    if ([cellTitle isEqualToString:@"归并排序"]) {
+        NSMutableArray * arr = [NSMutableArray arrayWithObjects:@10,@11,@9,@13,@8,@5,@14,@4,@16,@6,@17,@1,@21,nil];
+        [SortAlgorithm megerSortArr:arr];
+    }
+    if ([cellTitle isEqualToString:@"快速排序"]) {
+        NSMutableArray * arr = [NSMutableArray arrayWithObjects:@10,@11,@9,@13,@8,@5,@14,@4,@16,@6,@17,@1,@21,nil];
+        [SortAlgorithm quickSortArr:arr leftIndex:0 rightIndex:arr.count-1];
+    }
+    if ([cellTitle isEqualToString:@"堆排序"]) {
+        NSMutableArray * arr = [NSMutableArray arrayWithObjects:@10,@11,@9,@13,@8,@5,@14,@4,@16,@6,@17,@1,@21,nil];
+        [SortAlgorithm heapSortArr:arr];
+    }
+    if ([cellTitle isEqualToString:@"桶排序"]) {
+        NSMutableArray * arr = [NSMutableArray arrayWithObjects:@10,@11,@9,@13,@8,@5,@14,@4,@16,@6,@17,@1,@21,nil];
+        [SortAlgorithm radixSortArr:arr];
+    }
+    
+    // runtime
+    if ([cellTitle isEqualToString:@"runtime-imp"]) {
+        [self.runtimeSimple test];
+    }
+    if ([cellTitle isEqualToString:@"MethodSwizzleA"]) {
+        [self.runtimeSimple changeMethodSwizzle2];
+    }
+    
+    // runloop
+    if ([cellTitle isEqualToString:@"runloop"]) {
+        [self.runloopSimple testRunloop];
+    }
+    
+    // kvo
+    if ([cellTitle isEqualToString:@"kvoADD"]) {
+        [self.kvoSimple testKVO];
+    }
+    if ([cellTitle isEqualToString:@"kvoChanged"]) {
+        [self.kvoSimple changeValue];
+    }
+    
+    // blockTest
+    if ([cellTitle isEqualToString:@"blockTest"]) {
+        [self.blockSimple testBlock];
+    }
+    
+    // simpleView
+    if ([cellTitle isEqualToString:@"simpleView"]) {
+        [self jumpSimpleView];
+    }
+    
+    // CTMediator
+    if ([cellTitle isEqualToString:@"CTMediatorJumpPageA"]) {
+        UIViewController *vc = [[CTMediator sharedInstance] mediator_viewControllerForPageAWithParams:@{@"id": @"1101"}];
+        [self presentViewController:vc animated:YES completion:nil];
+    }
+    if ([cellTitle isEqualToString:@"CTMediatorJumpPageB"]) {
+        UIViewController *vc = [[CTMediator sharedInstance] mediator_viewControllerForPageBWithParams:@{@"id": @"1101"}];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    if ([cellTitle isEqualToString:@"CTMediatorToolFundication"]) {
+        [[CTMediator sharedInstance] mediator_createMessageForAWithParams:@{}];
+    }
+    
+    // ProtocolRoute
+    if ([cellTitle isEqualToString:@"ProtocolRouteJumpPage"]){
+        Class cls = [[ProtocolRouteMediator sharedInstance] classForProtocol:@protocol(ProtocolPageRouteProtocol)];
+        UIViewController<ProtocolPageRouteProtocol> *B_VC = [[cls alloc] init];
+        [B_VC action_B:@"param1" para2:222 para3:333 para4:444];
+        [self presentViewController:B_VC animated:YES completion:nil];
+    }
+    
 }
 
 #pragma mark ---- fun

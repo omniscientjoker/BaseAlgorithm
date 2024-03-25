@@ -23,9 +23,98 @@
 }
 @end
 
-
+@interface RuntimrSimple()<MethodClassADelegate,MethodClassBDelegate>
+@property(nonatomic,strong)MethodClassA * classA;
+@property(nonatomic,strong)MethodClassB * classB;
+@end
 @implementation RuntimrSimple
--(void)test{
+// 组合引入 实现多继承
+- (void)runFundication{
+    self.classA = [[MethodClassA alloc] init];
+    self.classB = [[MethodClassB alloc] init];
+    [self.classA methodA];
+    [self.classB methodB];
+}
+// 多个代理 实现多继承
+-(void)getOriginalAName:(NSString *)name{
+    NSLog(@"%@",name);
+}
+-(void)getOriginalBName:(NSString *)name{
+    NSLog(@"%@",name);
+}
+// 消息转发 - 快速转发
+- (id)forwardingTargetForSelector:(SEL)aSelector{
+    // 判断方法名 来决定是否转发
+    if ([NSStringFromSelector(aSelector) isEqualToString:@"methodB"]) {
+        // 根据 类名 获取类
+        Class class = NSClassFromString(@"MethodClassB");
+        // 判断是否为类方法
+        if (class_respondsToSelector(class,aSelector)) {
+            return class;
+        }
+        // 判断是否为实例方法
+        id b = [[class alloc] init];
+        if ([b respondsToSelector:aSelector]) {
+            return b;
+        }
+    }
+    return nil;
+}
+// 消息转发 - 标准转发
+// 在转发消息前先对方法重新签名
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
+    // 尝试自行实现方法签名
+    NSMethodSignature *signature = [super methodSignatureForSelector:aSelector];
+    // 若无法实现，尝试通过多继承得到的方法实现
+    if (signature == nil) {
+        Class classA = NSClassFromString(@"MethodClassA");
+        Class classB = NSClassFromString(@"MethodClassB");
+        // 判断该方法是哪个父类的，并通过其创建方法签名
+        if ([classA respondsToSelector:aSelector]) {
+            signature = [classA instanceMethodSignatureForSelector:aSelector];
+        }else if ([classB respondsToSelector:aSelector]) {
+            signature = [classB instanceMethodSignatureForSelector:aSelector];
+        }else {
+            id  a = [[classA alloc] init];
+            id  b = [[classB alloc] init];
+            if ([a respondsToSelector:aSelector]) {
+                signature = [a methodSignatureForSelector:aSelector];
+            } else if ([b respondsToSelector:aSelector]){
+                signature = [b methodSignatureForSelector:aSelector];
+            } else {
+                // 所有都查找不到 手动生成签名 防止崩溃
+                signature = [NSMethodSignature signatureWithObjCTypes:"v@:"];
+            }
+        }
+    }
+    return signature;
+}
+// 为方法签名后，转发消息
+- (void)forwardInvocation:(NSInvocation *)anInvocation {
+    SEL sel = [anInvocation selector];
+    Class classB = NSClassFromString(@"MethodClassB");
+    Class classA = NSClassFromString(@"MethodClassA");
+    id a = [[classA alloc] init];
+    id b = [[classB alloc] init];
+    if ([classB respondsToSelector:sel]) {
+        [anInvocation invokeWithTarget:classB];
+    }
+    if ([classA respondsToSelector:sel]) {
+        [anInvocation invokeWithTarget:classA];
+    }
+    if ([a respondsToSelector:sel]) {
+        [anInvocation invokeWithTarget:a];
+    }
+    if ([b respondsToSelector:sel]) {
+        [anInvocation invokeWithTarget:b];
+    }
+}
+- (void)doesNotRecognizeSelector:(SEL)aSelector{
+    NSString *selStr = NSStringFromSelector(aSelector);
+    NSLog(@"%@不存在",selStr);
+}
+
+- (void)test{
     Class test_cls    = NSClassFromString(@"testManager");
     id test_ins = [[test_cls alloc] init];
     SEL sel = sel_registerName("justTest:");
@@ -36,6 +125,9 @@
     impA(test_ins, sel, @"testA");
     impB(test_cls, sel, @"testB");
     [MethodClassA isSubclassOfClass:[NSObject class]];
+    
+    [self performSelector:@selector(methodATest)];
+    [self performSelector:@selector(methodATestFake)];
 }
 
 -(void)changeMethodSwizzle{

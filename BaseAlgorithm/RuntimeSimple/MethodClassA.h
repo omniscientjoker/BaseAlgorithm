@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+@protocol MethodClassADelegate <NSObject>
+- (void)getOriginalAName:(NSString *)name;
+@end
 @interface MethodClassA : NSObject
+@property (weak, nonatomic) id<MethodClassADelegate> delegate;
 -(void)methodA;
 @end
-
 NS_ASSUME_NONNULL_END

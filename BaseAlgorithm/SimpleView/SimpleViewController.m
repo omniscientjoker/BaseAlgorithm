@@ -48,12 +48,13 @@
     UIColor *randomColor = [UIColor colorWithRed:red green:green blue:blue alpha:1];
     _colorLayer.backgroundColor = randomColor.CGColor;
     
+    WEAK_SELF
     [UIView animateWithDuration:2 animations:^{
         CGFloat red = arc4random() % 255 / 255.0;
         CGFloat green = arc4random() % 255 / 255.0;
         CGFloat blue = arc4random() % 255 / 255.0;
         UIColor *randomColor = [UIColor colorWithRed:red green:green blue:blue alpha:1];
-        _colorLayer.backgroundColor = randomColor.CGColor;
+        weakSelf.colorLayer.backgroundColor = randomColor.CGColor;
     }];
 }
 

@@ -12,6 +12,9 @@
 -(void)methodA{
     NSLog(@"methodA = %@",NSStringFromClass([self class]));
     [self methodATest];
+    if ([self.delegate respondsToSelector:@selector(getOriginalAName:)]) {
+        [self.delegate getOriginalAName:@"MethodClassA"];
+    }
 }
 -(void)methodATest{
     NSLog(@"methodATest = %@",NSStringFromClass([self class]));
