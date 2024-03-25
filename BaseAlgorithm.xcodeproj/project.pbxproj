@@ -139,7 +139,6 @@
 		FA73803E2BB1136600D1534E /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
 		FA7380402BB113D400D1534E /* AspectsSimple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AspectsSimple.h; sourceTree = "<group>"; };
 		FA7380412BB113D400D1534E /* AspectsSimple.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AspectsSimple.m; sourceTree = "<group>"; };
-		FA7380442BB1175E00D1534E /* JsonEval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonEval.h; sourceTree = "<group>"; };
 		FA7380482BB1175F00D1534E /* JsonEvalToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonEvalToken.m; sourceTree = "<group>"; };
 		FA7380492BB1175F00D1534E /* JsonEvalLexer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonEvalLexer.m; sourceTree = "<group>"; };
 		FA73804A2BB1175F00D1534E /* JsonEvalReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonEvalReader.h; sourceTree = "<group>"; };
@@ -465,7 +464,6 @@
 		FA7380432BB116A100D1534E /* JsonEval */ = {
 			isa = PBXGroup;
 			children = (
-				FA7380442BB1175E00D1534E /* JsonEval.h */,
 				FA7380452BB1175F00D1534E /* Eval */,
 				FA7380742BB1176000D1534E /* Utilities */,
 			);

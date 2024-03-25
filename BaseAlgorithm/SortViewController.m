@@ -21,6 +21,8 @@
 #import "ProtocolRouteMediator.h"
 #import "ProtocolRouteMediatorProtocol.h"
 
+#import "AspectsSimple.h"
+
 @interface SortViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)NSArray* titleArr;
 @property(nonatomic,strong)RuntimrSimple * runtimeSimple;
@@ -151,6 +153,15 @@
         [self presentViewController:B_VC animated:YES completion:nil];
     }
     
+    // AspectsSimple
+    if ([cellTitle isEqualToString:@"AspectsSimpleNslog"]){
+        AspectsSimple * simple = [[AspectsSimple alloc] init];
+        [simple prientMessage];
+    }
+    if ([cellTitle isEqualToString:@"AspectsSimpleLoad"]){
+        AspectsSimple * simple = [[AspectsSimple alloc] init];
+        [simple exampleLoad];
+    }
 }
 
 #pragma mark ---- fun

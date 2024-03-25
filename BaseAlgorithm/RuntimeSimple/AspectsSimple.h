@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AspectsSimple : NSObject
-
+- (void)prientMessage;
+- (void)exampleLoad;
 @end
 
 NS_ASSUME_NONNULL_END

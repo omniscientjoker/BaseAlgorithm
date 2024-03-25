@@ -20,8 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"基础";
-    self.titleArr = @[@[@"冒泡排序",@"插入排序",@"选择排序",@"归并排序",@"快速排序",@"堆排序",@"桶排序"],@[@"runtime-imp",@"MethodSwizzleA"],@[@"runloop"],@[@"kvoADD",@"kvoChanged"],@[@"blockTest"],@[@"simpleView"],@[@"CTMediatorJumpPageA",@"CTMediatorJumpPageB",@"CTMediatorToolFundication",@"ProtocolRoute"]];
-    self.titleHeadArr = @[@"算法",@"runtime",@"runloop",@"kvo",@"block",@"simpleView",@"CTMediator"];
+    self.titleArr = @[@[@"冒泡排序",@"插入排序",@"选择排序",@"归并排序",@"快速排序",@"堆排序",@"桶排序"],@[@"runtime-imp",@"MethodSwizzleA"],@[@"runloop"],@[@"kvoADD",@"kvoChanged"],@[@"blockTest"],@[@"simpleView"],@[@"CTMediatorJumpPageA",@"CTMediatorJumpPageB",@"CTMediatorToolFundication",@"ProtocolRoute"],@[@"AspectsSimpleNslog",@"AspectsSimpleLoad"]];
+    self.titleHeadArr = @[@"算法",@"runtime",@"runloop",@"kvo",@"block",@"simpleView",@"CTMediator",@"AspectsSimple"];
     
     UITableView *  tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-64)];
     tableView.tableFooterView = [[UIView alloc] init];
