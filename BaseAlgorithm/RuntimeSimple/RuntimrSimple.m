@@ -109,11 +109,9 @@
         [anInvocation invokeWithTarget:b];
     }
 }
-- (void)doesNotRecognizeSelector:(SEL)aSelector{
-    NSString *selStr = NSStringFromSelector(aSelector);
-    NSLog(@"%@不存在",selStr);
-}
 
+
+#pragma mark ---- test
 - (void)test{
     Class test_cls    = NSClassFromString(@"testManager");
     id test_ins = [[test_cls alloc] init];
