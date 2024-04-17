@@ -8,27 +8,29 @@
 
 #import "BlockSimpleCode.h"
 @interface BlockSimpleCode()
+@property(nonatomic,assign)int       propertyNum;
 @property(nonatomic,strong)NSString *propertyStr;
 @property(nonatomic,strong)NSObject *object;
-@property(nonatomic,assign)int       propertyNum;
 @end
 
 @implementation BlockSimpleCode
 -(void)loadBlcok{
-    NSObject * obj = [[NSObject alloc] init];
     static int staticNum = 1;
     static NSString * staticStr = @"1";
     int num = 1;
     NSString * str = @"1";
-    self.propertyNum = 1;
-    self.propertyStr = @"1";
+    NSObject * obj = [[NSObject alloc] init];
+    self.propertyNum = 2;
+    self.propertyStr = @"2";
     self.object = [[NSObject alloc] init];
-    __block int blockNum = 1;
+    __block int blockNum = 3;
+    __block NSString * blockStr = @"3";
     void(^aBlock)(void) = ^{
         NSLog(@"Hello world %@",obj);
-        NSLog(@"Hello world %@",self.object);
+        NSLog(@"Hello world %d == %@",num,str);
+        NSLog(@"Hello world %d == %@",blockNum,blockStr);
         NSLog(@"Hello world %d == %@",staticNum,staticStr);
-        NSLog(@"Hello world %d == %@ == %d",num,str,blockNum);
+        NSLog(@"Hello world %@",self.object);
         NSLog(@"Hello world %d == %@",self.propertyNum,self.propertyStr);
     };
     aBlock();

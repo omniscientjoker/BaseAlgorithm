@@ -126,6 +126,7 @@
             }
             return nil;
         }
+        CFRunLoopGetMain();
         return [[self class] invokeWithCaller:caller selectorName:self.selectorName.copy argments:[argumentsList copy]];
     } else {
         SEL selector = NSSelectorFromString(self.selectorName);

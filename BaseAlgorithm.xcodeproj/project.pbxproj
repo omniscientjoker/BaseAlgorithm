@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 53;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -1009,6 +1009,16 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-ld64",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jm.BaseAlgorithm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1027,6 +1037,15 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-ld64",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jm.BaseAlgorithm;
 				PRODUCT_NAME = "$(TARGET_NAME)";

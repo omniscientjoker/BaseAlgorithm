@@ -120,8 +120,8 @@
     Method methodB = class_getClassMethod(test_cls,sel);
     IMP impA = method_getImplementation(methodA);
     IMP impB = method_getImplementation(methodB);
-    impA(test_ins, sel, @"testA");
-    impB(test_cls, sel, @"testB");
+//    impA(test_ins, sel, @"testA");
+//    impB(test_cls, sel, @"testB");
     [MethodClassA isSubclassOfClass:[NSObject class]];
     
     [self performSelector:@selector(methodATest)];
